@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+
+	<table style="border: 1px solid black; background-color: aliceblue; text-align: center;">
+		<thead>
+		<tr style="border: 1px solid black; height: 50px; background: white;">
+			<th style="width: 100px;">员工编号</th>
+			<th style="width: 100px;">姓名</th>
+			<th style="width: 200px;">职位</th>
+			<th style="width: 200px;">电话号码</th>
+			<th style="width: 200px;">操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="employee: ${employees}" style="border: 1px solid black; height: 50px;">
+			<td th:text="${employee.id}"></td>
+			<td th:text="${employee.name}"></td>
+			<td th:text="${employee.position}"></td>
+			<td th:text="${employee.phoneNumber}"></td>
+			<td><a href="">操作</a></td>
+		</tr>
+		</tbody>
+	</table>
+
+		
+		
+		
+		
+		
+	</body>
+</html>

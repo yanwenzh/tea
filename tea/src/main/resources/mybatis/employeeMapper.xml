@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.tea.mapper.EmployeeMapper">
+    <insert id="insert" parameterType="com.example.tea.pojo.Employee">
+        INSERT INTO employee VALUES(#{id}, #{name}, #{position}, #{phoneNumber})
+    </insert>
+    <delete id="delete" parameterType="int">
+        DELETE FROM employee WHERE id = #{id}
+    </delete>
+    <update id="update" parameterType="com.example.tea.pojo.Employee">
+        UPDATE employee SET
+        id = #{id},
+        name = #{name},
+        position = #{position},
+        phone_number = #{phoneNumber}
+        WHERE id = #{id}
+    </update>
+    <select id="select" resultType="com.example.tea.pojo.Employee">
+        SELECT id, name, position, phone_number as phoneNumber FROM employee
+    </select>
+
+
+
+</mapper>
